@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rustic Wonders — Handcrafted Home Goods by June Bauer | Long Island, NY</title>
+<meta name="description" content="Rustic Wonders creates one-of-a-kind handmade home goods on Long Island, NY — birdhouses, signs, décor & furniture crafted from driftwood, reclaimed wood & repurposed treasures. Where nature meets craftsmanship — every piece tells a story.">
+<meta name="keywords" content="handmade home goods, Long Island artisan, driftwood art, birdhouses, rustic decor, reclaimed wood furniture, handcrafted signs, June Bauer, Rustic Wonders">
+<meta name="author" content="June Bauer">
+<link rel="canonical" href="https://rusticwonders.vercel.app/">
+
+<!-- Open Graph / iMessage / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Rustic Wonders">
+<meta property="og:title" content="Rustic Wonders — Handcrafted Home Goods with a Personal Touch">
+<meta property="og:description" content="One-of-a-kind handmade birdhouses, signs, décor & furniture crafted from Long Island driftwood & reclaimed materials. Where nature meets craftsmanship — every piece tells a story.">
+<meta property="og:url" content="https://rusticwonders.vercel.app/">
+<meta property="og:image" content="https://rusticwonders.vercel.app/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Rustic Wonders logo — wood-textured lettering wrapped in a holly wreath">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rustic Wonders — Handcrafted Home Goods | Long Island, NY">
+<meta name="twitter:description" content="One-of-a-kind handmade home goods crafted from driftwood, reclaimed wood & repurposed treasures by June Bauer.">
+<meta name="twitter:image" content="https://rusticwonders.vercel.app/assets/og-image.png">
+
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Rustic Wonders",
+  "founder": {"@type": "Person", "name": "June Bauer"},
+  "description": "One-of-a-kind handcrafted home goods & décor made from driftwood, reclaimed wood, and repurposed materials.",
+  "slogan": "Where nature meets craftsmanship — every piece tells a story.",
+  "areaServed": "Long Island, New York",
+  "address": {"@type": "PostalAddress", "addressRegion": "NY", "addressLocality": "Long Island"},
+  "image": "https://rusticwonders.vercel.app/assets/logo.png",
+  "logo": "https://rusticwonders.vercel.app/assets/logo.png",
+  "sameAs": ["https://www.instagram.com/RusticWonders", "https://www.facebook.com/RusticWonders"]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --walnut:#3B2010; --chestnut:#6B3A1F; --caramel:#A0632A;
+  --oldgrowth:#1E3A1F; --holly:#2D5A27; --berry:#9B2335;
+  --linen:#E8DFC8; --warmwhite:#F7F2E8;
+  --beach:#C8B89A; --sky:#DCE8E4;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'EB Garamond',Georgia,serif;color:var(--walnut);background:var(--warmwhite);line-height:1.65;font-size:18px}
+h1,h2,h3{font-family:'Playfair Display',Garamond,serif}
+img{max-width:100%}
+a{color:var(--berry)}
+
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(59,32,16,.96);display:flex;align-items:center;justify-content:space-between;padding:.6rem 5%;box-shadow:0 2px 12px rgba(0,0,0,.25)}
+nav .brand{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+nav .brand img{width:44px;height:44px;border-radius:50%}
+nav .brand span{font-family:'Playfair Display',serif;font-weight:700;color:var(--linen);font-size:1.15rem;letter-spacing:.08em}
+nav ul{display:flex;gap:1.6rem;list-style:none}
+nav ul a{color:var(--linen);text-decoration:none;font-size:1rem;letter-spacing:.04em}
+nav ul a:hover{color:#fff;text-decoration:underline}
+@media(max-width:720px){nav ul{display:none}}
+
+/* HERO — beach / sky / dune themes */
+header{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:7rem 1.5rem 9rem;overflow:hidden;
+  background:linear-gradient(180deg,var(--sky) 0%,#e9e2cf 45%,var(--beach) 78%,#b9a884 100%)}
+header .birds{position:absolute;top:14%;left:8%;opacity:.55}
+header .birds2{position:absolute;top:9%;right:12%;opacity:.45}
+header img.logo{width:min(330px,62vw);border-radius:50%;box-shadow:0 18px 50px rgba(59,32,16,.35);margin-bottom:2rem}
+header h1{font-size:clamp(2.4rem,6vw,4.2rem);font-weight:900;letter-spacing:.06em;color:var(--walnut)}
+header .tag{font-style:italic;font-size:clamp(1.15rem,2.6vw,1.55rem);color:var(--oldgrowth);margin:1rem auto 0;max-width:680px}
+header .loc{margin-top:1.2rem;font-size:1.05rem;letter-spacing:.18em;text-transform:uppercase;color:var(--chestnut)}
+header .cta{margin-top:2.2rem;display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+.btn{display:inline-block;padding:.85rem 2.1rem;border-radius:4px;text-decoration:none;font-family:'Playfair Display',serif;letter-spacing:.05em;font-size:1.05rem;transition:.2s}
+.btn.primary{background:var(--holly);color:var(--warmwhite);border:1px solid var(--oldgrowth)}
+.btn.primary:hover{background:var(--oldgrowth)}
+.btn.ghost{border:1.5px solid var(--walnut);color:var(--walnut)}
+.btn.ghost:hover{background:var(--walnut);color:var(--warmwhite)}
+header svg.waves{position:absolute;bottom:-2px;left:0;width:100%;height:110px}
+
+/* SECTIONS */
+section{padding:5rem 6%}
+.kicker{letter-spacing:.28em;text-transform:uppercase;font-size:.85rem;color:var(--berry);text-align:center}
+h2{font-size:clamp(1.9rem,4vw,2.7rem);text-align:center;margin:.5rem 0 1rem;color:var(--walnut)}
+.rule{width:130px;margin:0 auto 2.6rem;display:block}
+.lead{max-width:780px;margin:0 auto;text-align:center;font-size:1.18rem}
+
+/* THEMES strip */
+.themes{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem;margin-top:2.4rem}
+.themes span{background:var(--linen);border:1px solid var(--caramel);color:var(--chestnut);border-radius:999px;padding:.45rem 1.3rem;font-size:.98rem;letter-spacing:.1em;text-transform:uppercase}
+
+/* STORY */
+#story{background:var(--warmwhite)}
+.story-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:3.5rem;max-width:1100px;margin:0 auto;align-items:center}
+@media(max-width:860px){.story-grid{grid-template-columns:1fr}}
+.story-grid img{border-radius:8px;box-shadow:0 14px 38px rgba(59,32,16,.28)}
+.values{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem}
+.values span{border-left:3px solid var(--berry);background:#fff;padding:.35rem .9rem;font-style:italic;color:var(--oldgrowth)}
+
+/* PRODUCTS */
+#products{background:linear-gradient(180deg,var(--linen),var(--warmwhite))}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.6rem;max-width:1200px;margin:0 auto}
+.card{background:#fffdf7;border:1px solid #d8cdb2;border-radius:10px;padding:2rem 1.7rem;box-shadow:0 6px 20px rgba(59,32,16,.08);transition:.25s}
+.card:hover{transform:translateY(-5px);box-shadow:0 14px 30px rgba(59,32,16,.18)}
+.card .icon{font-size:2.3rem;line-height:1}
+.card h3{margin:.8rem 0 .5rem;color:var(--chestnut);font-size:1.35rem}
+.card p{font-size:1.02rem}
+
+/* MATERIALS */
+#materials{background:var(--oldgrowth);color:var(--linen)}
+#materials h2,#materials .kicker{color:var(--linen)}
+#materials .kicker{color:#c9d6c2}
+.mats{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.4rem;max-width:1150px;margin:0 auto}
+.mat{border:1px solid rgba(232,223,200,.35);border-radius:8px;padding:1.5rem;background:rgba(247,242,232,.05)}
+.mat h3{color:#e9d9a8;font-size:1.18rem;margin-bottom:.4rem}
+.mat p{font-size:.98rem;color:#e4ddca}
+
+/* QUOTE */
+.quoteband{background:var(--walnut);color:var(--linen);text-align:center;padding:4.5rem 8%}
+.quoteband blockquote{max-width:850px;margin:0 auto;font-style:italic;font-size:clamp(1.25rem,2.8vw,1.7rem);line-height:1.6}
+.quoteband cite{display:block;margin-top:1.2rem;font-style:normal;letter-spacing:.15em;color:var(--caramel)}
+
+/* CUSTOM */
+#custom{background:var(--warmwhite);text-align:center}
+#custom .panel{max-width:760px;margin:0 auto;background:#fffdf7;border:1px solid #d8cdb2;border-radius:12px;padding:3rem 2.5rem;box-shadow:0 10px 30px rgba(59,32,16,.12)}
+#custom .panel h3{font-size:1.6rem;color:var(--berry);font-style:italic;margin-bottom:1rem}
+
+/* CONTACT */
+#contact{background:var(--linen);text-align:center}
+.contact-row{display:flex;flex-wrap:wrap;justify-content:center;gap:2.5rem;margin-top:2rem;font-size:1.08rem}
+.contact-row div b{display:block;color:var(--holly);letter-spacing:.12em;text-transform:uppercase;font-size:.85rem;margin-bottom:.2rem}
+
+/* FOOTER */
+footer{background:var(--walnut);color:#cdbfa6;text-align:center;padding:2.6rem 8%;font-size:.95rem}
+footer img{width:64px;height:64px;border-radius:50%;margin-bottom:1rem}
+footer .fine{margin-top:.8rem;font-size:.85rem;color:#9b8a72}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="brand" href="#top"><img src="/assets/favicon-32.png" srcset="/assets/icon-192.png 2x" alt="Rustic Wonders logo"><span>RUSTIC WONDERS</span></a>
+  <ul>
+    <li><a href="#story">Our Story</a></li>
+    <li><a href="#products">Creations</a></li>
+    <li><a href="#materials">Materials</a></li>
+    <li><a href="#custom">Custom Orders</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<header id="top">
+  <!-- birds -->
+  <svg class="birds" width="150" height="60" viewBox="0 0 150 60" fill="none" stroke="#3B2010" stroke-width="2.4" stroke-linecap="round"><path d="M5 30 Q15 18 25 30 Q35 18 45 30"/><path d="M60 16 Q68 7 76 16 Q84 7 92 16"/><path d="M105 42 Q112 34 119 42 Q126 34 133 42"/></svg>
+  <svg class="birds2" width="110" height="50" viewBox="0 0 110 50" fill="none" stroke="#3B2010" stroke-width="2.2" stroke-linecap="round"><path d="M5 25 Q13 15 21 25 Q29 15 37 25"/><path d="M55 38 Q62 30 69 38 Q76 30 83 38"/></svg>
+
+  <img class="logo" src="/assets/logo.png" alt="Rustic Wonders — wood-textured lettering wrapped in a hand-drawn holly wreath">
+  <h1>RUSTIC WONDERS</h1>
+  <p class="tag">"Where nature meets craftsmanship — every piece tells a story."</p>
+  <p class="loc">Handcrafted by June Bauer &middot; Long Island, New York</p>
+  <div class="cta">
+    <a class="btn primary" href="#products">Explore the Collection</a>
+    <a class="btn ghost" href="#custom">Request a Custom Piece</a>
+  </div>
+
+  <!-- beach waves -->
+  <svg class="waves" viewBox="0 0 1440 110" preserveAspectRatio="none">
+    <path d="M0,55 C240,110 480,0 720,45 C960,90 1200,15 1440,60 L1440,110 L0,110 Z" fill="#E8DFC8" opacity=".7"/>
+    <path d="M0,75 C260,120 520,30 780,70 C1040,108 1240,40 1440,80 L1440,110 L0,110 Z" fill="#F7F2E8"/>
+  </svg>
+</header>
+
+<section id="story">
+  <p class="kicker">Our Story</p>
+  <h2>Born of Driftwood, Flowers &amp; Salt Air</h2>
+  <svg class="rule" viewBox="0 0 130 12"><line x1="0" y1="6" x2="130" y2="6" stroke="#9B2335" stroke-width="1.5"/><circle cx="65" cy="6" r="3.5" fill="#9B2335"/><circle cx="20" cy="6" r="2.5" fill="#2D5A27"/><circle cx="110" cy="6" r="2.5" fill="#2D5A27"/></svg>
+  <div class="story-grid">
+    <div>
+      <p>Rustic Wonders is a one-of-a-kind handmade home goods business born from a passion for craftsmanship, creativity, and the timeless beauty of natural materials. Founded by artisan <b>June Bauer</b> on Long Island, New York, every creation is crafted entirely by hand — infused with care, character, and a deep respect for the materials that inspire each design.</p>
+      <p style="margin-top:1rem">From sun-bleached driftwood collected along Long Island's beaches to reclaimed barn wood and repurposed treasures given new life, each product is a unique work of art. No two pieces are ever exactly alike — that's not a limitation; <i>it's the whole point.</i></p>
+      <div class="values">
+        <span>Authenticity</span><span>Sustainability</span><span>Craftsmanship</span><span>Creativity</span><span>Community</span><span>Quality</span>
+      </div>
+    </div>
+    <img src="/assets/share-square.png" alt="The Rustic Wonders holly wreath logo">
+  </div>
+  <div class="themes">
+    <span>🌊 Beach</span><span>🌸 Flowers</span><span>🐦 Birds</span><span>🌿 Nature</span><span>🗽 Long Island</span>
+  </div>
+</section>
+
+<section id="products">
+  <p class="kicker">Handmade Creations</p>
+  <h2>One of a Kind, Every Time</h2>
+  <svg class="rule" viewBox="0 0 130 12"><line x1="0" y1="6" x2="130" y2="6" stroke="#9B2335" stroke-width="1.5"/><circle cx="65" cy="6" r="3.5" fill="#9B2335"/><circle cx="20" cy="6" r="2.5" fill="#2D5A27"/><circle cx="110" cy="6" r="2.5" fill="#2D5A27"/></svg>
+  <div class="cards">
+    <div class="card"><div class="icon">🐦</div><h3>Birdhouses</h3><p>Hand-built decorative and functional birdhouses crafted from driftwood, reclaimed barn wood, and found materials. Each reflects a unique natural form — perfect for the garden or as a statement piece indoors.</p></div>
+    <div class="card"><div class="icon">🪧</div><h3>Signs &amp; Lettering</h3><p>Custom and ready-made wooden signs featuring hand-painted or wood-burned lettering. Ideal for home entrances, kitchens, porches, and meaningful gifts.</p></div>
+    <div class="card"><div class="icon">🌸</div><h3>Home Décor</h3><p>Wall hangings, shelf accents, floral and seasonal arrangements, wreaths, centerpieces, and nature-inspired sculptural pieces that bring warmth and texture to any space.</p></div>
+    <div class="card"><div class="icon">🪑</div><h3>Furniture</h3><p>Small accent furniture — side tables, benches, shelving, and storage — crafted from reclaimed wood and repurposed materials. Functional, durable, and full of rustic charm.</p></div>
+    <div class="card"><div class="icon">🎄</div><h3>Seasonal &amp; Holiday</h3><p>Rotating collections for Christmas, fall, spring, and special occasions — ornaments, wreaths, and table centerpieces that celebrate each time of year in rustic style.</p></div>
+    <div class="card"><div class="icon">✨</div><h3>Custom Commissions</h3><p>Select custom orders for personalized pieces tailored to your vision, space, and style. <i>"Your vision. My hands. One of a kind."</i></p></div>
+  </div>
+</section>
+
+<section id="materials">
+  <p class="kicker">Materials &amp; Sustainability</p>
+  <h2>Nature's Materials, Given New Life</h2>
+  <svg class="rule" viewBox="0 0 130 12"><line x1="0" y1="6" x2="130" y2="6" stroke="#E8DFC8" stroke-width="1.5"/><circle cx="65" cy="6" r="3.5" fill="#A0632A"/></svg>
+  <p class="lead" style="margin-bottom:2.4rem">Rustic Wonders is committed to natural, reclaimed, and repurposed materials wherever possible — giving each piece distinctive character while caring for the environment we draw inspiration from.</p>
+  <div class="mats">
+    <div class="mat"><h3>🌊 Driftwood</h3><p>Gathered along Long Island's coastlines and beaches. Naturally weathered, smooth, and shaped by the sea — no two pieces alike.</p></div>
+    <div class="mat"><h3>🪵 Reclaimed Wood</h3><p>Salvaged barn wood, old fencing, and furniture. Rich patina, nail holes, and knots that tell a story of a past life.</p></div>
+    <div class="mat"><h3>♻️ Repurposed &amp; Recycled</h3><p>Thrift finds, vintage pieces, salvaged metals, glass, and hardware — upcycled into entirely new art forms and functional décor.</p></div>
+    <div class="mat"><h3>🌲 Fresh-Cut &amp; Natural Finishes</h3><p>Locally sourced hardwoods with stains, oils, and beeswax. Non-toxic options prioritized; food-safe finishes available on request.</p></div>
+  </div>
+</section>
+
+<div class="quoteband">
+  <blockquote>"Every piece of driftwood has floated for miles. Every knot in the wood has a history. When you bring a Rustic Wonders piece into your home, you bring all of that with you."</blockquote>
+  <cite>— JUNE BAUER, ARTISAN &amp; FOUNDER</cite>
+</div>
+
+<section id="custom">
+  <p class="kicker">Custom Orders</p>
+  <h2>Made Just for You</h2>
+  <svg class="rule" viewBox="0 0 130 12"><line x1="0" y1="6" x2="130" y2="6" stroke="#9B2335" stroke-width="1.5"/><circle cx="65" cy="6" r="3.5" fill="#9B2335"/></svg>
+  <div class="panel">
+    <h3>"Your vision. My hands. One of a kind."</h3>
+    <p>June accepts select custom commissions for personalized pieces tailored to your vision, space, and style — housewarmings, weddings, holidays, and heirloom-quality gifts. Custom work is available by request, subject to material and scheduling availability.</p>
+    <a class="btn primary" style="margin-top:1.6rem" href="#contact">Start a Conversation</a>
+  </div>
+</section>
+
+<section id="contact">
+  <p class="kicker">Contact &amp; Inquiries</p>
+  <h2>Find Rustic Wonders</h2>
+  <svg class="rule" viewBox="0 0 130 12"><line x1="0" y1="6" x2="130" y2="6" stroke="#9B2335" stroke-width="1.5"/><circle cx="65" cy="6" r="3.5" fill="#9B2335"/></svg>
+  <p class="lead">Catch us at Long Island farmers markets, holiday craft fairs, and artisan expos — or reach out directly for custom orders and availability.</p>
+  <div class="contact-row">
+    <div><b>Artisan</b>June Bauer</div>
+    <div><b>Location</b>Long Island, New York</div>
+    <div><b>Social</b>@RusticWonders &middot; Instagram &amp; Facebook</div>
+    <div><b>Custom Orders</b>Available by request</div>
+  </div>
+  <p style="margin-top:2rem;font-style:italic;color:var(--chestnut)">#RusticWonders &nbsp; #HandmadeNY &nbsp; #LongIslandArtisan &nbsp; #DriftwoodArt &nbsp; #ShopSmall &nbsp; #MadeInNewYork</p>
+</section>
+
+<footer>
+  <img src="/assets/icon-192.png" alt="Rustic Wonders logo">
+  <p><i>"Handcrafted with heart. Made for your home."</i></p>
+  <p class="fine">© 2026 Rustic Wonders / June Bauer · Long Island, New York · All Rights Reserved.<br>
+  All original artwork, designs, photographs, and brand materials are the exclusive intellectual property of June Bauer / Rustic Wonders.</p>
+</footer>
+
+</body>
+</html>
