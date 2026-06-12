@@ -48,224 +48,237 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,600&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --walnut:#3B2010; --chestnut:#6B3A1F; --caramel:#A0632A;
-  --oldgrowth:#1E3A1F; --holly:#2D5A27; --berry:#9B2335;
-  --linen:#E8DFC8; --warmwhite:#F7F2E8;
-  --beach:#C8B89A; --sky:#DCE8E4;
+  --aqua:#43BFB8; --aqua-deep:#2E938D; --seafoam:#D7F4F0; --sky:#EAF9FB;
+  --coral:#FF6F61; --coral-soft:#FF9A8D; --sunny:#FFD166; --blush:#FFC2CC;
+  --sand:#FFF6E9; --leaf:#7FBF6B; --ink:#2E4A52; --white:#FFFEFB;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'EB Garamond',Georgia,serif;color:var(--walnut);background:var(--warmwhite);line-height:1.65;font-size:18px}
-h1,h2,h3{font-family:'Playfair Display',Garamond,serif}
+body{font-family:'Quicksand',sans-serif;color:var(--ink);background:var(--white);line-height:1.7;font-size:17.5px}
+h1,h2{font-family:'Playfair Display',serif}
+.script{font-family:'Pacifico',cursive}
 img{max-width:100%}
-a{color:var(--berry)}
+a{color:var(--coral)}
 
 /* NAV */
-nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(59,32,16,.96);display:flex;align-items:center;justify-content:space-between;padding:.6rem 5%;box-shadow:0 2px 12px rgba(0,0,0,.25)}
-nav .brand{display:flex;align-items:center;gap:.7rem;text-decoration:none}
-nav .brand img{width:44px;height:44px;border-radius:50%}
-nav .brand span{font-family:'Playfair Display',serif;font-weight:700;color:var(--linen);font-size:1.15rem;letter-spacing:.08em}
-nav ul{display:flex;gap:1.6rem;list-style:none}
-nav ul a{color:var(--linen);text-decoration:none;font-size:1rem;letter-spacing:.04em}
-nav ul a:hover{color:#fff;text-decoration:underline}
-@media(max-width:720px){nav ul{display:none}}
+nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(255,254,251,.93);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:space-between;padding:.55rem 5%;box-shadow:0 2px 14px rgba(46,74,82,.12)}
+nav .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+nav .brand img{width:42px;height:42px}
+nav .brand span{font-family:'Pacifico',cursive;color:var(--aqua-deep);font-size:1.25rem}
+nav ul{display:flex;gap:1.5rem;list-style:none}
+nav ul a{color:var(--ink);text-decoration:none;font-weight:600;font-size:.98rem}
+nav ul a:hover{color:var(--coral)}
+@media(max-width:760px){nav ul{display:none}}
 
-/* HERO — beach / sky / dune themes */
-header{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:7rem 1.5rem 9rem;overflow:hidden;
-  background:linear-gradient(180deg,var(--sky) 0%,#e9e2cf 45%,var(--beach) 78%,#b9a884 100%)}
-header .birds{position:absolute;top:14%;left:8%;opacity:.55}
-header .birds2{position:absolute;top:9%;right:12%;opacity:.45}
-header img.logo{width:min(330px,62vw);border-radius:50%;box-shadow:0 18px 50px rgba(59,32,16,.35);margin-bottom:2rem}
-header h1{font-size:clamp(2.4rem,6vw,4.2rem);font-weight:900;letter-spacing:.06em;color:var(--walnut)}
-header .tag{font-style:italic;font-size:clamp(1.15rem,2.6vw,1.55rem);color:var(--oldgrowth);margin:1rem auto 0;max-width:680px}
-header .loc{margin-top:1.2rem;font-size:1.05rem;letter-spacing:.18em;text-transform:uppercase;color:var(--chestnut)}
-header .cta{margin-top:2.2rem;display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
-.btn{display:inline-block;padding:.85rem 2.1rem;border-radius:4px;text-decoration:none;font-family:'Playfair Display',serif;letter-spacing:.05em;font-size:1.05rem;transition:.2s}
-.btn.primary{background:var(--holly);color:var(--warmwhite);border:1px solid var(--oldgrowth)}
-.btn.primary:hover{background:var(--oldgrowth)}
-.btn.ghost{border:1.5px solid var(--walnut);color:var(--walnut)}
-.btn.ghost:hover{background:var(--walnut);color:var(--warmwhite)}
-header svg.waves{position:absolute;bottom:-2px;left:0;width:100%;height:110px}
+/* HERO */
+header{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:6.5rem 1.5rem 10rem;overflow:hidden;
+  background:linear-gradient(180deg,#BDEDF2 0%,var(--sky) 35%,var(--seafoam) 60%,#FBEED3 85%,#F6E3BC 100%)}
+.watermark{position:absolute;top:64px;left:50%;transform:translateX(-50%);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(46,74,82,.45);white-space:nowrap}
+header .sun{position:absolute;top:7%;right:9%;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,#FFE08A 0%,var(--sunny) 60%,rgba(255,209,102,0) 72%);animation:glow 5s ease-in-out infinite}
+@keyframes glow{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+header .birds{position:absolute;top:16%;left:8%;opacity:.7;animation:fly 9s ease-in-out infinite}
+header .birds2{position:absolute;top:11%;right:26%;opacity:.55;animation:fly 11s ease-in-out infinite reverse}
+@keyframes fly{0%,100%{transform:translate(0,0)}50%{transform:translate(26px,-14px)}}
+header img.logo{width:min(300px,58vw);margin-bottom:1.4rem;filter:drop-shadow(0 14px 28px rgba(46,74,82,.25))}
+header .hi{font-family:'Pacifico',cursive;color:var(--coral);font-size:clamp(1.3rem,3vw,1.8rem)}
+header h1{font-size:clamp(2.1rem,5.4vw,3.6rem);font-weight:900;color:var(--ink);max-width:850px;margin:.4rem auto 0}
+header h1 em{color:var(--aqua-deep);font-style:italic}
+header .tag{font-size:clamp(1.05rem,2.3vw,1.3rem);margin:1.1rem auto 0;max-width:640px;font-weight:500}
+header .cta{margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+.btn{display:inline-block;padding:.9rem 2.2rem;border-radius:999px;text-decoration:none;font-weight:700;font-size:1.02rem;transition:.2s;box-shadow:0 6px 16px rgba(46,74,82,.16)}
+.btn.primary{background:var(--coral);color:#fff}
+.btn.primary:hover{background:#ff5847;transform:translateY(-2px)}
+.btn.ghost{background:#fff;color:var(--aqua-deep);border:2px solid var(--aqua)}
+.btn.ghost:hover{background:var(--seafoam);transform:translateY(-2px)}
+header .flowers{position:absolute;bottom:90px;left:4%;font-size:2rem;opacity:.85}
+header .flowers2{position:absolute;bottom:110px;right:5%;font-size:2.2rem;opacity:.85}
+header svg.waves{position:absolute;bottom:-2px;left:0;width:100%;height:120px}
 
 /* SECTIONS */
-section{padding:5rem 6%}
-.kicker{letter-spacing:.28em;text-transform:uppercase;font-size:.85rem;color:var(--berry);text-align:center}
-h2{font-size:clamp(1.9rem,4vw,2.7rem);text-align:center;margin:.5rem 0 1rem;color:var(--walnut)}
-.rule{width:130px;margin:0 auto 2.6rem;display:block}
-.lead{max-width:780px;margin:0 auto;text-align:center;font-size:1.18rem}
+section{padding:4.6rem 6%}
+.kicker{font-family:'Pacifico',cursive;font-size:1.35rem;color:var(--coral);text-align:center}
+h2{font-size:clamp(1.8rem,4vw,2.5rem);text-align:center;margin:.3rem 0 1rem;color:var(--ink)}
+.lead{max-width:740px;margin:0 auto;text-align:center;font-size:1.12rem}
+.squiggle{display:block;margin:0 auto 2rem}
 
-/* THEMES strip */
-.themes{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem;margin-top:2.4rem}
-.themes span{background:var(--linen);border:1px solid var(--caramel);color:var(--chestnut);border-radius:999px;padding:.45rem 1.3rem;font-size:.98rem;letter-spacing:.1em;text-transform:uppercase}
+/* PROMISE STRIP */
+.promises{background:var(--white)}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.4rem;max-width:1150px;margin:2.2rem auto 0}
+.promise{text-align:center;background:var(--sky);border-radius:22px;padding:1.8rem 1.3rem;transition:.25s}
+.promise:nth-child(2){background:#FFF0E8}.promise:nth-child(3){background:#FFF8E1}.promise:nth-child(4){background:#F0F8E8}
+.promise:hover{transform:translateY(-6px) rotate(-.5deg)}
+.promise .em{font-size:2.4rem}
+.promise h3{font-size:1.15rem;margin:.5rem 0 .3rem;color:var(--aqua-deep)}
+.promise p{font-size:.95rem}
 
 /* STORY */
-#story{background:var(--warmwhite)}
-.story-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:3.5rem;max-width:1100px;margin:0 auto;align-items:center}
+#story{background:linear-gradient(180deg,var(--seafoam),var(--sky))}
+.story-grid{display:grid;grid-template-columns:1fr .85fr;gap:3rem;max-width:1080px;margin:0 auto;align-items:center}
 @media(max-width:860px){.story-grid{grid-template-columns:1fr}}
-.story-grid img{border-radius:8px;box-shadow:0 14px 38px rgba(59,32,16,.28)}
-.values{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem}
-.values span{border-left:3px solid var(--berry);background:#fff;padding:.35rem .9rem;font-style:italic;color:var(--oldgrowth)}
+.story-grid img{border-radius:24px;background:var(--white);padding:1.5rem;box-shadow:0 16px 40px rgba(46,74,82,.16)}
+.story-grid .big{font-size:1.2rem;font-weight:600;color:var(--aqua-deep)}
 
 /* PRODUCTS */
-#products{background:linear-gradient(180deg,var(--linen),var(--warmwhite))}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.6rem;max-width:1200px;margin:0 auto}
-.card{background:#fffdf7;border:1px solid #d8cdb2;border-radius:10px;padding:0 0 2rem;overflow:hidden;box-shadow:0 6px 20px rgba(59,32,16,.08);transition:.25s}
-.card:hover{transform:translateY(-5px);box-shadow:0 14px 30px rgba(59,32,16,.18)}
-.card .icon{font-size:2.3rem;line-height:1;margin-top:1.4rem}
-.card img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;border-bottom:1px solid #d8cdb2}
-.card .icon,.card h3,.card p{padding:0 1.7rem}
-.card h3{margin:.8rem 0 .5rem;color:var(--chestnut);font-size:1.35rem}
-.card p{font-size:1.02rem}
-
-/* MATERIALS */
-#materials{background:var(--oldgrowth);color:var(--linen)}
-#materials h2,#materials .kicker{color:var(--linen)}
-#materials .kicker{color:#c9d6c2}
-.mats{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.4rem;max-width:1150px;margin:0 auto}
-.mat{border:1px solid rgba(232,223,200,.35);border-radius:8px;padding:1.5rem;background:rgba(247,242,232,.05)}
-.mat h3{color:#e9d9a8;font-size:1.18rem;margin-bottom:.4rem}
-.mat p{font-size:.98rem;color:#e4ddca}
+#shop .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.6rem;max-width:1180px;margin:0 auto}
+.card{background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 8px 24px rgba(46,74,82,.12);transition:.25s}
+.card:hover{transform:translateY(-7px) rotate(.4deg);box-shadow:0 18px 36px rgba(46,74,82,.2)}
+.card img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+.card h3{padding:1.1rem 1.5rem .2rem;color:var(--coral);font-size:1.25rem}
+.card p{padding:0 1.5rem 1.5rem;font-size:.98rem}
 
 /* QUOTE */
-.quoteband{background:var(--walnut);color:var(--linen);text-align:center;padding:4.5rem 8%}
-.quoteband blockquote{max-width:850px;margin:0 auto;font-style:italic;font-size:clamp(1.25rem,2.8vw,1.7rem);line-height:1.6}
-.quoteband cite{display:block;margin-top:1.2rem;font-style:normal;letter-spacing:.15em;color:var(--caramel)}
+.quoteband{background:linear-gradient(120deg,var(--aqua) 0%,var(--aqua-deep) 100%);color:#fff;text-align:center;padding:4.2rem 8%}
+.quoteband blockquote{max-width:820px;margin:0 auto;font-size:clamp(1.2rem,2.6vw,1.55rem);font-weight:500;line-height:1.65}
+.quoteband cite{display:block;margin-top:1.1rem;font-style:normal;font-family:'Pacifico',cursive;color:var(--sunny);font-size:1.2rem}
 
-/* CUSTOM */
-#custom{background:var(--warmwhite);text-align:center}
-#custom .panel{max-width:760px;margin:0 auto;background:#fffdf7;border:1px solid #d8cdb2;border-radius:12px;padding:3rem 2.5rem;box-shadow:0 10px 30px rgba(59,32,16,.12)}
-#custom .panel h3{font-size:1.6rem;color:var(--berry);font-style:italic;margin-bottom:1rem}
+/* LOVE / TESTIMONIALS */
+#love{background:var(--sand)}
+.loves{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.5rem;max-width:1100px;margin:2rem auto 0}
+.love{background:#fff;border-radius:22px;padding:1.8rem;box-shadow:0 8px 20px rgba(46,74,82,.1);position:relative}
+.love .stars{color:var(--sunny);font-size:1.1rem;letter-spacing:.15em}
+.love p{margin:.6rem 0;font-size:1rem;font-style:italic}
+.love b{color:var(--aqua-deep)}
+
+/* CUSTOM CTA */
+#custom{background:linear-gradient(180deg,#FFE9EC,#FFF4E5);text-align:center}
+#custom .panel{max-width:720px;margin:0 auto}
+#custom h2{color:var(--coral)}
 
 /* CONTACT */
-#contact{background:var(--linen);text-align:center}
-.contact-row{display:flex;flex-wrap:wrap;justify-content:center;gap:2.5rem;margin-top:2rem;font-size:1.08rem}
-.contact-row div b{display:block;color:var(--holly);letter-spacing:.12em;text-transform:uppercase;font-size:.85rem;margin-bottom:.2rem}
+#contact{background:var(--sky);text-align:center}
+.contact-row{display:flex;flex-wrap:wrap;justify-content:center;gap:2.4rem;margin-top:1.8rem;font-size:1.05rem}
+.contact-row div b{display:block;color:var(--coral);letter-spacing:.1em;text-transform:uppercase;font-size:.8rem;margin-bottom:.1rem}
 
 /* FOOTER */
-footer{background:var(--walnut);color:#cdbfa6;text-align:center;padding:2.6rem 8%;font-size:.95rem}
-footer img{width:64px;height:64px;border-radius:50%;margin-bottom:1rem}
-footer .fine{margin-top:.8rem;font-size:.85rem;color:#9b8a72}
+footer{background:var(--ink);color:#cfe6e3;text-align:center;padding:2.6rem 8%;font-size:.95rem}
+footer img{width:74px;margin-bottom:.8rem}
+footer .script{color:var(--sunny);font-size:1.25rem}
+footer .fine{margin-top:.9rem;font-size:.83rem;color:#9fbcb9}
 </style>
 </head>
 <body>
 
 <nav>
-  <a class="brand" href="#top"><img src="assets/favicon-32.png" srcset="assets/icon-192.png 2x" alt="Rustic Wonders logo"><span>RUSTIC WONDERS</span></a>
+  <a class="brand" href="#top"><img src="assets/logo.png" alt="Rustic Wonders logo"><span>Rustic Wonders</span></a>
   <ul>
-    <li><a href="#story">Our Story</a></li>
-    <li><a href="#products">Creations</a></li>
-    <li><a href="#materials">Materials</a></li>
-    <li><a href="#custom">Custom Orders</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#story">Meet June</a></li>
+    <li><a href="#shop">The Goodies</a></li>
+    <li><a href="#love">Happy Homes</a></li>
+    <li><a href="#custom">Custom Magic</a></li>
+    <li><a href="#contact">Say Hello</a></li>
   </ul>
 </nav>
 
 <header id="top">
-  <!-- birds -->
-  <svg class="birds" width="150" height="60" viewBox="0 0 150 60" fill="none" stroke="#3B2010" stroke-width="2.4" stroke-linecap="round"><path d="M5 30 Q15 18 25 30 Q35 18 45 30"/><path d="M60 16 Q68 7 76 16 Q84 7 92 16"/><path d="M105 42 Q112 34 119 42 Q126 34 133 42"/></svg>
-  <svg class="birds2" width="110" height="50" viewBox="0 0 110 50" fill="none" stroke="#3B2010" stroke-width="2.2" stroke-linecap="round"><path d="M5 25 Q13 15 21 25 Q29 15 37 25"/><path d="M55 38 Q62 30 69 38 Q76 30 83 38"/></svg>
+  <p class="watermark">Rustic Wonders &mdash; A June Bauer creation</p>
+  <div class="sun"></div>
+  <svg class="birds" width="150" height="60" viewBox="0 0 150 60" fill="none" stroke="#2E4A52" stroke-width="2.6" stroke-linecap="round"><path d="M5 30 Q15 18 25 30 Q35 18 45 30"/><path d="M60 16 Q68 7 76 16 Q84 7 92 16"/><path d="M105 42 Q112 34 119 42 Q126 34 133 42"/></svg>
+  <svg class="birds2" width="110" height="50" viewBox="0 0 110 50" fill="none" stroke="#2E4A52" stroke-width="2.3" stroke-linecap="round"><path d="M5 25 Q13 15 21 25 Q29 15 37 25"/><path d="M55 38 Q62 30 69 38 Q76 30 83 38"/></svg>
 
-  <img class="logo" src="assets/logo.png" alt="Rustic Wonders — wood-textured lettering wrapped in a hand-drawn holly wreath">
-  <h1>RUSTIC WONDERS</h1>
-  <p class="tag">"Where nature meets craftsmanship — every piece tells a story."</p>
-  <p class="loc">Handcrafted by June Bauer &middot; Long Island, New York</p>
+  <img class="logo" src="assets/logo.png" alt="Rustic Wonders — hand-lettered logo wrapped in a holly wreath">
+  <p class="hi">Hello, sunshine! 🌊</p>
+  <h1>Wonder-filled treasures, handmade for <em>your happy place</em></h1>
+  <p class="tag">Beach-born birdhouses, blooming décor, and smile-making keepsakes — each one crafted by hand on Long Island, and each one the only one of its kind in the whole wide world. 🐚🌸🐦</p>
   <div class="cta">
-    <a class="btn primary" href="#products">Explore the Collection</a>
-    <a class="btn ghost" href="#custom">Request a Custom Piece</a>
+    <a class="btn primary" href="#shop">See the Goodies ✨</a>
+    <a class="btn ghost" href="#custom">Dream Up a Custom Piece</a>
   </div>
+  <div class="flowers">🌷🌼🌸</div>
+  <div class="flowers2">🌺🌻</div>
 
-  <!-- beach waves -->
-  <svg class="waves" viewBox="0 0 1440 110" preserveAspectRatio="none">
-    <path d="M0,55 C240,110 480,0 720,45 C960,90 1200,15 1440,60 L1440,110 L0,110 Z" fill="#E8DFC8" opacity=".7"/>
-    <path d="M0,75 C260,120 520,30 780,70 C1040,108 1240,40 1440,80 L1440,110 L0,110 Z" fill="#F7F2E8"/>
+  <svg class="waves" viewBox="0 0 1440 120" preserveAspectRatio="none">
+    <path d="M0,55 C240,115 480,5 720,50 C960,95 1200,20 1440,65 L1440,120 L0,120 Z" fill="#9FE0DB" opacity=".55"/>
+    <path d="M0,80 C260,125 520,35 780,75 C1040,112 1240,45 1440,85 L1440,120 L0,120 Z" fill="#FFFEFB"/>
   </svg>
 </header>
 
+<section class="promises">
+  <p class="kicker">why hearts skip a beat</p>
+  <h2>Little Wonders, Big Smiles</h2>
+  <svg class="squiggle" width="160" height="14" viewBox="0 0 160 14" fill="none" stroke="#FF6F61" stroke-width="3" stroke-linecap="round"><path d="M4 8 Q14 2 24 8 Q34 14 44 8 Q54 2 64 8 Q74 14 84 8 Q94 2 104 8 Q114 14 124 8 Q134 2 144 8 Q150 11 156 8"/></svg>
+  <div class="pgrid">
+    <div class="promise"><div class="em">🌊</div><h3>Born on the Beach</h3><p>Driftwood gathered from Long Island shores becomes the cutest décor you've ever seen. The ocean did the styling — June did the magic.</p></div>
+    <div class="promise"><div class="em">💝</div><h3>Truly One of a Kind</h3><p>No factories. No copies. No "add to cart ×1000." Every single piece is the only one on Earth — just like the person you're gifting it to.</p></div>
+    <div class="promise"><div class="em">🌸</div><h3>Made with Heart</h3><p>Hand-built, hand-painted, hand-finished — with love baked into every brushstroke. You can feel the difference the moment you hold it.</p></div>
+    <div class="promise"><div class="em">🌎</div><h3>Kind to the Planet</h3><p>Rescued, repurposed, and reimagined treasures. Beautiful for your home, gentle on Mother Nature. Win-win-wonderful.</p></div>
+  </div>
+</section>
+
 <section id="story">
-  <p class="kicker">Our Story</p>
-  <h2>Born of Driftwood, Flowers &amp; Salt Air</h2>
-  <svg class="rule" viewBox="0 0 130 12"><line x1="0" y1="6" x2="130" y2="6" stroke="#9B2335" stroke-width="1.5"/><circle cx="65" cy="6" r="3.5" fill="#9B2335"/><circle cx="20" cy="6" r="2.5" fill="#2D5A27"/><circle cx="110" cy="6" r="2.5" fill="#2D5A27"/></svg>
+  <p class="kicker">meet the maker</p>
+  <h2>Hi, I'm June! 👋</h2>
+  <svg class="squiggle" width="160" height="14" viewBox="0 0 160 14" fill="none" stroke="#43BFB8" stroke-width="3" stroke-linecap="round"><path d="M4 8 Q14 2 24 8 Q34 14 44 8 Q54 2 64 8 Q74 14 84 8 Q94 2 104 8 Q114 14 124 8 Q134 2 144 8 Q150 11 156 8"/></svg>
   <div class="story-grid">
     <div>
-      <p>Rustic Wonders is a one-of-a-kind handmade home goods business born from a passion for craftsmanship, creativity, and the timeless beauty of natural materials. Founded by artisan <b>June Bauer</b> on Long Island, New York, every creation is crafted entirely by hand — infused with care, character, and a deep respect for the materials that inspire each design.</p>
-      <p style="margin-top:1rem">From sun-bleached driftwood collected along Long Island's beaches to reclaimed barn wood and repurposed treasures given new life, each product is a unique work of art. No two pieces are ever exactly alike — that's not a limitation; <i>it's the whole point.</i></p>
-      <div class="values">
-        <span>Authenticity</span><span>Sustainability</span><span>Craftsmanship</span><span>Creativity</span><span>Community</span><span>Quality</span>
-      </div>
+      <p class="big">I wander Long Island's beaches collecting driftwood, forgotten treasures, and little sparks of inspiration — then I turn them into things that make people smile.</p>
+      <p style="margin-top:1rem">Rustic Wonders started with a simple belief: your home deserves more personality than a big-box store can deliver. Every birdhouse, sign, and keepsake I make carries a story — of salt air, of sunny mornings, of materials given a joyful second life. When you bring one home, that story becomes <i>yours</i>.</p>
+      <p style="margin-top:1rem;font-weight:600;color:var(--coral)">Where nature meets craftsmanship — every piece tells a story. 🌿</p>
     </div>
-    <img src="assets/share-square.png" alt="The Rustic Wonders holly wreath logo">
-  </div>
-  <div class="themes">
-    <span>🌊 Beach</span><span>🌸 Flowers</span><span>🐦 Birds</span><span>🌿 Nature</span><span>🗽 Long Island</span>
+    <img src="assets/logo.png" alt="The Rustic Wonders wreath logo, hand-drawn with holly and berries">
   </div>
 </section>
 
-<section id="products">
-  <p class="kicker">Handmade Creations</p>
-  <h2>One of a Kind, Every Time</h2>
-  <svg class="rule" viewBox="0 0 130 12"><line x1="0" y1="6" x2="130" y2="6" stroke="#9B2335" stroke-width="1.5"/><circle cx="65" cy="6" r="3.5" fill="#9B2335"/><circle cx="20" cy="6" r="2.5" fill="#2D5A27"/><circle cx="110" cy="6" r="2.5" fill="#2D5A27"/></svg>
+<section id="shop">
+  <p class="kicker">the goodies</p>
+  <h2>Pick Your Next Favorite Thing</h2>
+  <svg class="squiggle" width="160" height="14" viewBox="0 0 160 14" fill="none" stroke="#FFD166" stroke-width="3" stroke-linecap="round"><path d="M4 8 Q14 2 24 8 Q34 14 44 8 Q54 2 64 8 Q74 14 84 8 Q94 2 104 8 Q114 14 124 8 Q134 2 144 8 Q150 11 156 8"/></svg>
   <div class="cards">
-    <div class="card"><img src="assets/product-birdhouse.jpg" alt="Driftwood birdhouse placeholder mockup" loading="lazy"><div class="icon">🐦</div><h3>Birdhouses</h3><p>Hand-built decorative and functional birdhouses crafted from driftwood, reclaimed barn wood, and found materials. Each reflects a unique natural form — perfect for the garden or as a statement piece indoors.</p></div>
-    <div class="card"><img src="assets/product-sign.jpg" alt="Hand-painted wooden sign placeholder mockup" loading="lazy"><div class="icon">🪧</div><h3>Signs &amp; Lettering</h3><p>Custom and ready-made wooden signs featuring hand-painted or wood-burned lettering. Ideal for home entrances, kitchens, porches, and meaningful gifts.</p></div>
-    <div class="card"><img src="assets/product-decor.jpg" alt="Nature-inspired home décor placeholder mockup" loading="lazy"><div class="icon">🌸</div><h3>Home Décor</h3><p>Wall hangings, shelf accents, floral and seasonal arrangements, wreaths, centerpieces, and nature-inspired sculptural pieces that bring warmth and texture to any space.</p></div>
-    <div class="card"><img src="assets/product-furniture.jpg" alt="Reclaimed wood furniture placeholder mockup" loading="lazy"><div class="icon">🪑</div><h3>Furniture</h3><p>Small accent furniture — side tables, benches, shelving, and storage — crafted from reclaimed wood and repurposed materials. Functional, durable, and full of rustic charm.</p></div>
-    <div class="card"><img src="assets/product-seasonal.jpg" alt="Seasonal holiday collection placeholder mockup" loading="lazy"><div class="icon">🎄</div><h3>Seasonal &amp; Holiday</h3><p>Rotating collections for Christmas, fall, spring, and special occasions — ornaments, wreaths, and table centerpieces that celebrate each time of year in rustic style.</p></div>
-    <div class="card"><img src="assets/product-custom.jpg" alt="Custom commission placeholder mockup" loading="lazy"><div class="icon">✨</div><h3>Custom Commissions</h3><p>Select custom orders for personalized pieces tailored to your vision, space, and style. <i>"Your vision. My hands. One of a kind."</i></p></div>
-  </div>
-</section>
-
-<section id="materials">
-  <p class="kicker">Materials &amp; Sustainability</p>
-  <h2>Nature's Materials, Given New Life</h2>
-  <svg class="rule" viewBox="0 0 130 12"><line x1="0" y1="6" x2="130" y2="6" stroke="#E8DFC8" stroke-width="1.5"/><circle cx="65" cy="6" r="3.5" fill="#A0632A"/></svg>
-  <p class="lead" style="margin-bottom:2.4rem">Rustic Wonders is committed to natural, reclaimed, and repurposed materials wherever possible — giving each piece distinctive character while caring for the environment we draw inspiration from.</p>
-  <div class="mats">
-    <div class="mat"><h3>🌊 Driftwood</h3><p>Gathered along Long Island's coastlines and beaches. Naturally weathered, smooth, and shaped by the sea — no two pieces alike.</p></div>
-    <div class="mat"><h3>🪵 Reclaimed Wood</h3><p>Salvaged barn wood, old fencing, and furniture. Rich patina, nail holes, and knots that tell a story of a past life.</p></div>
-    <div class="mat"><h3>♻️ Repurposed &amp; Recycled</h3><p>Thrift finds, vintage pieces, salvaged metals, glass, and hardware — upcycled into entirely new art forms and functional décor.</p></div>
-    <div class="mat"><h3>🌲 Fresh-Cut &amp; Natural Finishes</h3><p>Locally sourced hardwoods with stains, oils, and beeswax. Non-toxic options prioritized; food-safe finishes available on request.</p></div>
+    <div class="card"><img src="assets/product-birdhouse.jpg" alt="Driftwood birdhouse placeholder" loading="lazy"><h3>🐦 Birdhouses with Beachy Souls</h3><p>Five-star real estate for your feathered friends — and a total showstopper on your porch. Warning: neighbors <i>will</i> ask where you got it.</p></div>
+    <div class="card"><img src="assets/product-sign.jpg" alt="Hand-painted sign placeholder" loading="lazy"><h3>🪧 Signs that Say It Sweetly</h3><p>Hand-lettered charm for kitchens, entryways, and she-sheds. The perfect "just because" gift that says you really, truly get them.</p></div>
+    <div class="card"><img src="assets/product-decor.jpg" alt="Floral home décor placeholder" loading="lazy"><h3>🌸 Décor that Blooms Year-Round</h3><p>Wreaths, wall art, and flowery accents that make every room feel like the first day of spring. Instant cozy, zero watering required.</p></div>
+    <div class="card"><img src="assets/product-furniture.jpg" alt="Upcycled furniture placeholder" loading="lazy"><h3>🪑 Furniture with a Past Life</h3><p>Sweet little benches, shelves, and tables with history in every knot — reborn, polished up, and ready to steal the spotlight.</p></div>
+    <div class="card"><img src="assets/product-seasonal.jpg" alt="Seasonal collection placeholder" loading="lazy"><h3>🎁 Seasonal Sparkle</h3><p>Rotating collections for every holiday and every mood — snag them before they're gone, because handmade means limited edition. Always.</p></div>
+    <div class="card"><img src="assets/product-custom.jpg" alt="Custom commission placeholder" loading="lazy"><h3>✨ Custom Dream Pieces</h3><p>Got a vision? June's got the hands. "Your vision. My hands. One of a kind." — the most meaningful gift you'll ever give.</p></div>
   </div>
 </section>
 
 <div class="quoteband">
   <blockquote>"Every piece of driftwood has floated for miles. Every knot in the wood has a history. When you bring a Rustic Wonders piece into your home, you bring all of that with you."</blockquote>
-  <cite>— JUNE BAUER, ARTISAN &amp; FOUNDER</cite>
+  <cite>— June Bauer, maker of wonders</cite>
 </div>
 
+<section id="love">
+  <p class="kicker">happy homes</p>
+  <h2>People Are Smitten 💕</h2>
+  <svg class="squiggle" width="160" height="14" viewBox="0 0 160 14" fill="none" stroke="#FF6F61" stroke-width="3" stroke-linecap="round"><path d="M4 8 Q14 2 24 8 Q34 14 44 8 Q54 2 64 8 Q74 14 84 8 Q94 2 104 8 Q114 14 124 8 Q134 2 144 8 Q150 11 156 8"/></svg>
+  <div class="loves">
+    <div class="love"><div class="stars">★★★★★</div><p>"The birdhouse June made us is the star of our garden. Guests notice it before they notice the pool!"</p><b>— A happy Long Island home</b></div>
+    <div class="love"><div class="stars">★★★★★</div><p>"I cried when I opened my custom sign. It was exactly the memory I described — but somehow even better."</p><b>— A custom-order sweetheart</b></div>
+    <div class="love"><div class="stars">★★★★★</div><p>"Found Rustic Wonders at a craft fair and now every gift I give comes from June. Nothing else compares."</p><b>— A market-day regular</b></div>
+  </div>
+</section>
+
 <section id="custom">
-  <p class="kicker">Custom Orders</p>
-  <h2>Made Just for You</h2>
-  <svg class="rule" viewBox="0 0 130 12"><line x1="0" y1="6" x2="130" y2="6" stroke="#9B2335" stroke-width="1.5"/><circle cx="65" cy="6" r="3.5" fill="#9B2335"/></svg>
+  <p class="kicker">custom magic</p>
+  <h2>"Your vision. My hands. One of a kind."</h2>
   <div class="panel">
-    <h3>"Your vision. My hands. One of a kind."</h3>
-    <p>June accepts select custom commissions for personalized pieces tailored to your vision, space, and style — housewarmings, weddings, holidays, and heirloom-quality gifts. Custom work is available by request, subject to material and scheduling availability.</p>
-    <a class="btn primary" style="margin-top:1.6rem" href="#contact">Start a Conversation</a>
+    <p class="lead">Dreaming of something made just for you — a wedding keepsake, a housewarming wow, a Mother's Day tear-jerker? Tell June your story and she'll craft it into something you'll keep forever.</p>
+    <a class="btn primary" style="margin-top:1.8rem" href="#contact">Let's Make It Happen 💌</a>
   </div>
 </section>
 
 <section id="contact">
-  <p class="kicker">Contact &amp; Inquiries</p>
-  <h2>Find Rustic Wonders</h2>
-  <svg class="rule" viewBox="0 0 130 12"><line x1="0" y1="6" x2="130" y2="6" stroke="#9B2335" stroke-width="1.5"/><circle cx="65" cy="6" r="3.5" fill="#9B2335"/></svg>
-  <p class="lead">Catch us at Long Island farmers markets, holiday craft fairs, and artisan expos — or reach out directly for custom orders and availability.</p>
+  <p class="kicker">say hello</p>
+  <h2>Come Find the Wonder</h2>
+  <p class="lead">Catch Rustic Wonders at Long Island farmers markets, craft fairs, and artisan pop-ups all season long — or reach out anytime. June would love to meet you! 🌞</p>
   <div class="contact-row">
-    <div><b>Artisan</b>June Bauer</div>
-    <div><b>Location</b>Long Island, New York</div>
-    <div><b>Social</b>@RusticWonders &middot; Instagram &amp; Facebook</div>
-    <div><b>Custom Orders</b>Available by request</div>
+    <div><b>Maker</b>June Bauer</div>
+    <div><b>Home Base</b>Long Island, New York</div>
+    <div><b>Follow Along</b>@RusticWonders · Instagram &amp; Facebook</div>
+    <div><b>Custom Orders</b>Always welcome!</div>
   </div>
-  <p style="margin-top:2rem;font-style:italic;color:var(--chestnut)">#RusticWonders &nbsp; #HandmadeNY &nbsp; #LongIslandArtisan &nbsp; #DriftwoodArt &nbsp; #ShopSmall &nbsp; #MadeInNewYork</p>
+  <p style="margin-top:1.8rem;color:var(--aqua-deep);font-weight:600">#RusticWonders &nbsp; #HandmadeNY &nbsp; #LongIslandArtisan &nbsp; #DriftwoodArt &nbsp; #ShopSmall</p>
 </section>
 
 <footer>
-  <img src="assets/icon-192.png" alt="Rustic Wonders logo">
-  <p><i>"Handcrafted with heart. Made for your home."</i></p>
-  <p class="fine">© 2026 Rustic Wonders / June Bauer · Long Island, New York · All Rights Reserved.<br>
-  All original artwork, designs, photographs, and brand materials are the exclusive intellectual property of June Bauer / Rustic Wonders.</p>
+  <img src="assets/logo.png" alt="Rustic Wonders logo">
+  <p class="script">Handcrafted with heart. Made for your home.</p>
+  <p class="fine">Rustic Wonders &mdash; A June Bauer creation<br>
+  © 2026 Rustic Wonders / June Bauer · Long Island, New York · All Rights Reserved.</p>
 </footer>
 
 </body>
